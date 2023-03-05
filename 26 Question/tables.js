@@ -1,7 +1,7 @@
-var num = 5;
-
-for (let i = 1; i <= 10; i++) {
-    let result = num * i;
-
-    console.log(`${num} * ${i} = ${result}`);
-}
+function getTable() {
+    let promp = prompt("Enter the number:");
+    for (var i = 1; i <= 10; i++) {
+      var result = promp * i;
+      document.getElementById(i).innerHTML = `${promp} * ${i} = ${result}`;
+    }
+  }
