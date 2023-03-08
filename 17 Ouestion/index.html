@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      function getDays() {
+        var month = prompt("Enter the month :");
+
+        switch (month) {
+          case "Jan":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "Feb":
+            document.getElementById("days").innerHTML = "28";
+            break;
+          case "Mar":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "Apr":
+            document.getElementById("days").innerHTML = "30";
+            break;
+          case "May":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "Jun":
+            document.getElementById("days").innerHTML = "30";
+            break;
+          case "Jul":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "Aug":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "sept":
+            document.getElementById("days").innerHTML = "30";
+            break;
+          case "Oct":
+            document.getElementById("days").innerHTML = "31";
+            break;
+          case "Nov":
+            document.getElementById("days").innerHTML = "30";
+            break;
+          case "Dec":
+            document.getElementById("days").innerHTML = "31";
+            break;
+
+          default:
+            document.getElementById("days").innerHTML = "hehe";
+
+            break;
+        }
+      }
+    </script>
+    <title>Days</title>
+  </head>
+  <body>
+    <h1>Number of Days in a month.</h1>
+    <button onclick="getDays()" style="height: 40px; width: 100px;">Check</button>
+    <p id="days"></p>
+  </body>
+</html>
