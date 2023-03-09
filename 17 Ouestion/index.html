@@ -1,108 +1,71 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      function getDays() {
-        var month = prompt("Enter the month :");
-
-        switch (month) {
-          case "Jan":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "Feb":
-            document.getElementById("days").innerHTML = "28";
-            break;
-          case "Mar":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "Apr":
-            document.getElementById("days").innerHTML = "30";
-            break;
-          case "May":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "Jun":
-            document.getElementById("days").innerHTML = "30";
-            break;
-          case "Jul":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "Aug":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "sept":
-            document.getElementById("days").innerHTML = "30";
-            break;
-          case "Oct":
-            document.getElementById("days").innerHTML = "31";
-            break;
-          case "Nov":
-            document.getElementById("days").innerHTML = "30";
-            break;
-          case "Dec":
-            document.getElementById("days").innerHTML = "31";
-            break;
-
-          default:
-            document.getElementById("days").innerHTML = "hehe";
-
-            break;
-        }
-      }
-    </script>
-    <title>Days</title>
-  </head>
-  <body>
-    <h1>Number of Days in a month.</h1>
-    <button onclick="getDays()" style="height: 40px; width: 100px;">Check</button>
-    <p id="days"></p>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Document</title>
-  </head>
-  <body>
-    <select name="months" id="month-select">
-      <option value='jan'>January</option>
-      <option value="feb">February</option>
-      <option value="mar">March</option>
-      <option value="apr">April</option>
-      <option value="may">May</option>
-      <option value="jun">June</option>
-      <option value="jul">July</option>
-      <option value="aug">August</option>
-      <option value="sept">September</option>
-      <option value="oct">October</option>
-      <option value="nov">November</option>
-      <option value="dec">December</option>
-    </select>
-    <div id="sel">
-      <p>csxs</p>
-    </div>
-    <script>
-        var season = document.getElementById("month-select");
-        var content = document.getElementById("sel");
-  
-        season.addEventListener("change", function () {
-          var selected = season.value;
-  
-          if (selected === 'jan' || selected === "feb" || selected === "mar") {
-            content.innerHTML = "<p>hadjldljaldl</p>";
-          } else {
-              content.innerHTML = "<p>hduhfjla</p>";
-          }
-        });
-      </script>
-  </body>
-</html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+			crossorigin="anonymous"
+		></script>
 
+		<title>Number of Days</title>
+	</head>
+	<body>
+        <h1>Please select a month:</h1>
+		<select name="months" class="form-select" id="month-select">
+			<option value="">Select a month</option>
+			<option value="jan">January</option>
+			<option value="feb">February</option>
+			<option value="mar">March</option>
+			<option value="apr">April</option>
+			<option value="may">May</option>
+			<option value="jun">June</option>
+			<option value="jul">July</option>
+			<option value="aug">August</option>
+			<option value="sept">September</option>
+			<option value="oct">October</option>
+			<option value="nov">November</option>
+			<option value="dec">December</option>
+		</select>
+		<div></div>
+		<p id="sel">Result will be displayed here</p>
+
+		<script>
+			var season = document.getElementById("month-select");
+			var content = document.getElementById("sel");
+
+			season.addEventListener("change", function () {
+				var selected = season.value;
+
+				if (
+					selected === "jan" ||
+					selected === "mar" ||
+					selected === "may" ||
+					selected === "jul" ||
+					selected === "aug" ||
+					selected === "oct" ||
+					selected === "dec"
+				) {
+					content.innerHTML = "This month is having 31 days.";
+				} else if (
+					selected === "apr" ||
+					selected === "jun" ||
+					selected === "sept" ||
+					selected === "nov"
+				) {
+					content.innerHTML = "This month is having 30 days.";
+				} else if (selected === "feb") {
+					content.innerHTML = "This month is having 28 days";
+				}
+			});
+		</script>
+	</body>
+</html>
