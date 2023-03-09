@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -60,4 +60,49 @@
     <button onclick="getDays()" style="height: 40px; width: 100px;">Check</button>
     <p id="days"></p>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Document</title>
+  </head>
+  <body>
+    <select name="months" id="month-select">
+      <option value='jan'>January</option>
+      <option value="feb">February</option>
+      <option value="mar">March</option>
+      <option value="apr">April</option>
+      <option value="may">May</option>
+      <option value="jun">June</option>
+      <option value="jul">July</option>
+      <option value="aug">August</option>
+      <option value="sept">September</option>
+      <option value="oct">October</option>
+      <option value="nov">November</option>
+      <option value="dec">December</option>
+    </select>
+    <div id="sel">
+      <p>csxs</p>
+    </div>
+    <script>
+        var season = document.getElementById("month-select");
+        var content = document.getElementById("sel");
+  
+        season.addEventListener("change", function () {
+          var selected = season.value;
+  
+          if (selected === 'jan' || selected === "feb" || selected === "mar") {
+            content.innerHTML = "<p>hadjldljaldl</p>";
+          } else {
+              content.innerHTML = "<p>hduhfjla</p>";
+          }
+        });
+      </script>
+  </body>
 </html>
+
