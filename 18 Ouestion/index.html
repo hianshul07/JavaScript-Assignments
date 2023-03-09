@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        
-    </script>
-    <title>Leap year</title>
-</head>
-<body>
-    <h1>Enter the year:</h1>
-    <input type="text">
-    <button onclick="getDays">Enter</button>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Leap year</title>
+	</head>
+	<body>
+		<h1>Enter the year:</h1>
+		<input id="num" type="text" min="0" />
+		<div id="normal" style="display: none;">
+			<p id="jan">January - 31 days</p>
+			<p id="feb">February - 28 days</p>
+			<p id="mar">March - 31 days</p>
+			<p id="apr">April - 30 days</p>
+			<p id="may">May - 31 days</p>
+			<p id="jun">June - 30 days</p>
+			<p id="jul">July - 31 days</p>
+			<p id="aug">August - 31 days</p>
+			<p id="sept">September - 30 days</p>
+			<p id="oct">October - 31 days</p>
+			<p id="nov">November - 30 days</p>
+			<p id="dec">December - 31 days</p>
+		</div>
+        <div id="leap" style="display: none;">
+			<p id="jan">January - 31 days</p>
+			<p id="feb">February - 29 days</p>
+			<p id="mar">March - 31 days</p>
+			<p id="apr">April - 30 days</p>
+			<p id="may">May - 31 days</p>
+			<p id="jun">June - 30 days</p>
+			<p id="jul">July - 31 days</p>
+			<p id="aug">August - 31 days</p>
+			<p id="sept">September - 30 days</p>
+			<p id="oct">October - 31 days</p>
+			<p id="nov">November - 30 days</p>
+			<p id="dec">December - 31 days</p>
+		</div>
+		<script>
+			const para = document.getElementById("para");
+			const number = document.querySelector("input");
+
+			number.addEventListener("input", function () {
+				var numValue = number.value;
+
+				if (numValue % 4 === 0) {
+					document.getElementById("leap").style.display = "block";
+					document.getElementById("normal").style.display = "none";
+					// document.querySelector("leap").style.visibility = "visible";
+				} else if (numValue % 4 !== 0) {
+					document.getElementById("normal").style.display = "block";
+					document.getElementById("leap").style.display = "none";
+                }
+			});
+		</script>
+	</body>
 </html>
