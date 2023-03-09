@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./grade.js"></script>
-    <title>Grades</title>
-  </head>
-  <body>
-    <h1>Check your grades.</h1>
-    <h3>Enter your grades</h3>
-    <button onclick="check()" style="height: 40px; width: 100px">Check</button>
-    <p id="result"></p>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- <script src="./grade.js"></script> -->
+		<title>Grades</title>
+	</head>
+	<body>
+		<h3>Enter your grades</h3>
+		<input type="number" id="grades" />
+		<button id="check">Check</button>
+		<p id="result"></p>
+		<script>
+			var grades = document.getElementById("grades");
+			var button = document.getElementById("check");
+
+			button.addEventListener("click", function () {
+				var textVal = grades.value;
+				document.getElementById("result").innerHTML = `${textVal}`;
+
+				if (textVal <= 100 && textVal >= 80) {
+					document.getElementById("result").innerHTML = "Your grade is A";
+				} else if (textVal <= 79 && textVal >= 70) {
+					document.getElementById("result").innerHTML = "Your grade is B";
+				} else if (textVal <= 69 && textVal >= 60) {
+					document.getElementById("result").innerHTML = "Your grade is C";
+				} else if (textVal <= 59 && textVal >= 50) {
+					document.getElementById("result").innerHTML = "Your grade is D";
+				} 
+        else if (textVal <= 49 && textVal >= 1) {
+					document.getElementById("result").innerHTML = "Your grade is F";
+				}
+         else {
+					document.getElementById("result").innerHTML = "Please enter a number between 0-100";
+				}
+			});
+		</script>
+	</body>
 </html>

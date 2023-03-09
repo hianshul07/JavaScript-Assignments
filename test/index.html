@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>hhehhehe</h1>
+		<input type="text" name="" id="" />
+        <button id="change">Submit</button>
+		<p id="pp"></p>
+		<script>
+			var text1 = document.querySelector("input");
+            var button = document.getElementById("change")
+            
+
+			// text1.addEventListener("input", function () {
+			// 	var textVal = text1.value;
+
+			// 	// if (textVal) {
+			// 	// document.getElementById("pp").innerHTML = `${textVal}`;
+			// 	// };
+			// });
+
+            button.addEventListener("click", function () {
+				var textVal = text1.value;
+
+				// if (textVal) {
+				document.getElementById("pp").innerHTML = `${textVal}`;
+				// };
+			});
+
+
+		</script>
+	</body>
+</html>
