@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
   <script>
-    var fileName = prompt("Enter file name.")
+    function fileName() {
+      var fileName = prompt("Enter the file name with extension:")
+      
+      var end = fileName.split(".").pop()
+      console.log(end);
+      document.getElementById("result").innerHTML = `The file extension is: ${end}`
+    }
   </script>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +17,7 @@
 </head>
 <body>
   <h1>Enter file name</h1>
+  <button onclick="fileName()" style="height: 40px; width: 100px;">Enter</button>
   <p id="result"></p>
 </body>
 </html>
