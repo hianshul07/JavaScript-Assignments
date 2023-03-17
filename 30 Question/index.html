@@ -4,15 +4,16 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 		<title>Calculator</title>
 	</head>
 	<body>
-		<h1>Enter 2 numbers:</h1>
+		<h1>Calculator</h1>
 		<table>
 			<tr>
 				<td>First number</td>
 				<td>
-					<input type="number" id="second" />
+					<input type="number" id="first" />
 				</td>
 			</tr>
 			<tr>
@@ -22,6 +23,41 @@
 				</td>
 			</tr>
 		</table>
-    <button id="check" style="height: 40px; width: 40px;"><strong>=</strong></button>
+		<br />
+		<button
+			id="addition"
+			onclick="addition()"
+			style="height: 40px; width: 40px"
+		>
+			<strong>+</strong>
+		</button>
+		<button
+			id="subtraction"
+			onclick="subtraction()"
+			style="height: 40px; width: 40px"
+		>
+			<strong>-</strong>
+		</button>
+		<button
+			id="multiply"
+			onclick="multiplication()"
+			style="height: 40px; width: 40px"
+		>
+			<strong>*</strong>
+		</button>
+		<button
+			id="division"
+			onclick="division()"
+			style="height: 40px; width: 40px"
+		>
+			<strong>/</strong>
+		</button>
+
+		<p id="result"></p>
+		<!-- <p id="sub">here</p>
+		<p id="multi">here</p>
+		<p id="div">here</p> -->
+
+		<script src="./calculator.js"></script>
 	</body>
 </html>
