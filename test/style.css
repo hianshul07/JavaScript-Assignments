@@ -1,3 +1,10 @@
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	font-size: 2rem;
+}
+
 body,
 html {
 	height: 90vh;
@@ -9,8 +16,8 @@ html {
 
 .parent {
 	display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
 }
 
 .child {
@@ -24,7 +31,39 @@ html {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  font-size: 2rem;
-  color: wheat;
-  
+	font-size: 2rem;
+	color: wheat;
+}
+
+#unordered-list {
+	color: red;
+}
+
+.ordered-list {
+	color: palevioletred;
+}
+
+h1 {
+	color: brown;
+}
+
+p {
+	/* this will select the <p> element */
+}
+
+img {
+	/* this will select the <img> element */
+}
+
+img + p {
+	/* this will select the immediate next <p> element which is next to the <img> element  */
+}
+
+img + p {
+	/* this will select the immediate next <p> element which is next to the <img> element  */
+}
+
+
+* {
+	/* color: green */
 }
